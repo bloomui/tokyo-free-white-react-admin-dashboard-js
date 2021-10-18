@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import { experimentalStyled } from '@material-ui/core/styles';
+import { styled } from '@mui/material/styles';
 
-const LabelWrapper = experimentalStyled('span')(
+const LabelWrapper = styled('span')(
   ({ theme }) => `
       background-color: ${theme.colors.alpha.black[5]};
       padding: ${theme.spacing(0.5, 1)};

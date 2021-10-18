@@ -1,10 +1,10 @@
 {
   "theme_color": "#1975ff",
-  "background_color": "#F6F8FB",
+  "background_color": "#f2f5f9",
   "display": "standalone",
   "start_url": ".",
   "short_name": "Tokyo",
-  "name": "Tokyo React Admin Dashboard",
+  "name": "Tokyo Free White React Javascript Admin Dashboard",
   "icons": [
     {
       "src": "/icon-192x192.png",

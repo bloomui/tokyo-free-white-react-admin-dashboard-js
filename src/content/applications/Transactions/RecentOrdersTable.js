@@ -23,11 +23,11 @@ import {
   Typography,
   useTheme,
   CardHeader
-} from '@material-ui/core';
+} from '@mui/material';
 
 import Label from 'src/components/Label';
-import EditTwoToneIcon from '@material-ui/icons/EditTwoTone';
-import DeleteTwoToneIcon from '@material-ui/icons/DeleteTwoTone';
+import EditTwoToneIcon from '@mui/icons-material/EditTwoTone';
+import DeleteTwoToneIcon from '@mui/icons-material/DeleteTwoTone';
 import BulkActions from './BulkActions';
 
 const getStatusLabel = (cryptoOrderStatus) => {

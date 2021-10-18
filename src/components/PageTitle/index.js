@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import AddTwoToneIcon from '@material-ui/icons/AddTwoTone';
-import { Typography, Button, Grid } from '@material-ui/core';
+import AddTwoToneIcon from '@mui/icons-material/AddTwoTone';
+import { Typography, Button, Grid } from '@mui/material';
 
 const PageTitle = ({
     heading = '',

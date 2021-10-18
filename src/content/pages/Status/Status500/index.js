@@ -6,21 +6,19 @@ import {
   Container,
   Button,
   Grid
-} from '@material-ui/core';
+} from '@mui/material';
 import { Helmet } from 'react-helmet-async';
-import RefreshTwoToneIcon from '@material-ui/icons/RefreshTwoTone';
-import LoadingButton from '@material-ui/lab/LoadingButton';
+import RefreshTwoToneIcon from '@mui/icons-material/RefreshTwoTone';
+import LoadingButton from '@mui/lab/LoadingButton';
+import { styled } from '@mui/material/styles';
 
-
-import { experimentalStyled } from '@material-ui/core/styles';
-
-const GridWrapper = experimentalStyled(Grid)(
+const GridWrapper = styled(Grid)(
   ({ theme }) => `
     background: ${theme.colors.gradients.black1};
 `
 );
 
-const MainContent = experimentalStyled(Box)(
+const MainContent = styled(Box)(
   () => `
     height: 100%;
     display: flex;
@@ -32,13 +30,13 @@ const MainContent = experimentalStyled(Box)(
 `
 );
 
-const TypographyPrimary = experimentalStyled(Typography)(
+const TypographyPrimary = styled(Typography)(
   ({ theme }) => `
       color: ${theme.colors.alpha.white[100]};
 `
 );
 
-const TypographySecondary = experimentalStyled(Typography)(
+const TypographySecondary = styled(Typography)(
   ({ theme }) => `
       color: ${theme.colors.alpha.white[70]};
 `
@@ -117,7 +115,7 @@ function Status500() {
               <Container maxWidth="sm">
                 <Box textAlign="center">
                   <TypographyPrimary variant="h1" sx={{ my: 2 }}>
-                    Tokyo Free White React Admin Dashboard
+                    Tokyo Free White React Javascript Admin Dashboard
                   </TypographyPrimary>
                   <TypographySecondary
                     variant="h4"

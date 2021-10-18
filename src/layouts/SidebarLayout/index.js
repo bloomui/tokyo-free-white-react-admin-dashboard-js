@@ -1,11 +1,11 @@
-import { experimentalStyled } from '@material-ui/core/styles';
-import { Box } from '@material-ui/core';
+import { styled } from '@mui/material/styles';
+import { Box } from '@mui/material';
 import { Outlet } from 'react-router-dom';
 
 import Sidebar from './Sidebar';
 import Header from './Header';
 
-const MainWrapper = experimentalStyled(Box)(
+const MainWrapper = styled(Box)(
   ({ theme }) => `
         flex: 1 1 auto;
         display: flex;
@@ -17,7 +17,7 @@ const MainWrapper = experimentalStyled(Box)(
 `
 );
 
-const MainContent = experimentalStyled(Box)(
+const MainContent = styled(Box)(
   ({ theme }) => `
         margin-top: ${theme.header.height};
         flex: 1 1 auto;

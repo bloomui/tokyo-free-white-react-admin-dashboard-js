@@ -19,18 +19,18 @@ import {
   DialogTitle,
   Slide,
   Hidden
-} from '@material-ui/core';
-import { experimentalStyled } from '@material-ui/core/styles';
-import SearchTwoToneIcon from '@material-ui/icons/SearchTwoTone';
-import FindInPageTwoToneIcon from '@material-ui/icons/FindInPageTwoTone';
+} from '@mui/material';
+import { styled } from '@mui/material/styles';
+import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone';
+import FindInPageTwoToneIcon from '@mui/icons-material/FindInPageTwoTone';
 
-import ChevronRightTwoToneIcon from '@material-ui/icons/ChevronRightTwoTone';
+import ChevronRightTwoToneIcon from '@mui/icons-material/ChevronRightTwoTone';
 
 const Transition = forwardRef(function Transition(props, ref) {
   return <Slide direction="down" ref={ref} {...props} />;
 });
 
-const DialogWrapper = experimentalStyled(Dialog)(
+const DialogWrapper = styled(Dialog)(
   () => `
     .MuiDialog-container {
         height: auto;
@@ -42,7 +42,7 @@ const DialogWrapper = experimentalStyled(Dialog)(
 `
 );
 
-const SearchInputWrapper = experimentalStyled(TextField)(
+const SearchInputWrapper = styled(TextField)(
   ({ theme }) => `
     background: ${theme.colors.alpha.white[100]};
 
@@ -52,7 +52,7 @@ const SearchInputWrapper = experimentalStyled(TextField)(
 `
 );
 
-const DialogTitleWrapper = experimentalStyled(DialogTitle)(
+const DialogTitleWrapper = styled(DialogTitle)(
   ({ theme }) => `
     background: ${theme.colors.alpha.black[5]};
     padding: ${theme.spacing(3)}

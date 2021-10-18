@@ -1,7 +1,7 @@
-import { Box, Container, Link, Typography } from '@material-ui/core';
-import { experimentalStyled } from '@material-ui/core/styles';
+import { Box, Container, Link, Typography } from '@mui/material';
+import { styled } from '@mui/material/styles';
 
-const FooterWrapper = experimentalStyled(Box)(
+const FooterWrapper = styled(Box)(
   ({ theme }) => `
         border-radius: 0;
         margin: ${theme.spacing(3)} 0;
@@ -21,7 +21,7 @@ function Footer() {
         >
           <Box>
             <Typography variant="subtitle1">
-              &copy; 2021 - Tokyo Free White React Admin Dashboard
+              &copy; 2021 - Tokyo Free White React Javascript Admin Dashboard
             </Typography>
           </Box>
           <Typography sx={{ pt: { xs: 2, md: 0 } }} variant="subtitle1">

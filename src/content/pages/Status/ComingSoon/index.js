@@ -11,17 +11,17 @@ import {
   InputAdornment,
   Button,
   FormHelperText
-} from '@material-ui/core';
+} from '@mui/material';
 import { Helmet } from 'react-helmet-async';
 import Logo from 'src/components/LogoSign';
 
-import { experimentalStyled } from '@material-ui/core/styles';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import MailTwoToneIcon from '@material-ui/icons/MailTwoTone';
+import { styled } from '@mui/material/styles';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import MailTwoToneIcon from '@mui/icons-material/MailTwoTone';
 
-const MainContent = experimentalStyled(Box)(
+const MainContent = styled(Box)(
   () => `
     height: 100%;
     display: flex;
@@ -33,25 +33,25 @@ const MainContent = experimentalStyled(Box)(
 `
 );
 
-const TypographyH1 = experimentalStyled(Typography)(
+const TypographyH1 = styled(Typography)(
   ({ theme }) => `
   font-size: ${theme.typography.pxToRem(75)};
 `
 );
 
-const TypographyH3 = experimentalStyled(Typography)(
+const TypographyH3 = styled(Typography)(
   ({ theme }) => `
   color: ${theme.colors.alpha.black[50]};
 `
 );
 
-const OutlinedInputWrapper = experimentalStyled(OutlinedInput)(
+const OutlinedInputWrapper = styled(OutlinedInput)(
   ({ theme }) => `
     background-color: ${theme.colors.alpha.white[100]};
 `
 );
 
-const ButtonNotify = experimentalStyled(Button)(
+const ButtonNotify = styled(Button)(
   ({ theme }) => `
     margin-right: -${theme.spacing(1)};
 `

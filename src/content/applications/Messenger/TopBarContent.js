@@ -15,24 +15,24 @@ import {
   ListItem,
   ListItemText,
   ListItemIcon
-} from '@material-ui/core';
+} from '@mui/material';
 
-import { experimentalStyled } from '@material-ui/core/styles';
+import { styled } from '@mui/material/styles';
 import { formatDistance, subMinutes } from 'date-fns';
-import CallTwoToneIcon from '@material-ui/icons/CallTwoTone';
-import VideoCameraFrontTwoToneIcon from '@material-ui/icons/VideoCameraFrontTwoTone';
-import InfoTwoToneIcon from '@material-ui/icons/InfoTwoTone';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import SearchTwoToneIcon from '@material-ui/icons/SearchTwoTone';
-import ColorLensTwoToneIcon from '@material-ui/icons/ColorLensTwoTone';
-import NotificationsOffTwoToneIcon from '@material-ui/icons/NotificationsOffTwoTone';
-import EmojiEmotionsTwoToneIcon from '@material-ui/icons/EmojiEmotionsTwoTone';
-import CancelTwoToneIcon from '@material-ui/icons/CancelTwoTone';
-import BlockTwoToneIcon from '@material-ui/icons/BlockTwoTone';
-import WarningTwoToneIcon from '@material-ui/icons/WarningTwoTone';
-import DescriptionTwoToneIcon from '@material-ui/icons/DescriptionTwoTone';
+import CallTwoToneIcon from '@mui/icons-material/CallTwoTone';
+import VideoCameraFrontTwoToneIcon from '@mui/icons-material/VideoCameraFrontTwoTone';
+import InfoTwoToneIcon from '@mui/icons-material/InfoTwoTone';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone';
+import ColorLensTwoToneIcon from '@mui/icons-material/ColorLensTwoTone';
+import NotificationsOffTwoToneIcon from '@mui/icons-material/NotificationsOffTwoTone';
+import EmojiEmotionsTwoToneIcon from '@mui/icons-material/EmojiEmotionsTwoTone';
+import CancelTwoToneIcon from '@mui/icons-material/CancelTwoTone';
+import BlockTwoToneIcon from '@mui/icons-material/BlockTwoTone';
+import WarningTwoToneIcon from '@mui/icons-material/WarningTwoTone';
+import DescriptionTwoToneIcon from '@mui/icons-material/DescriptionTwoTone';
 
-const RootWrapper = experimentalStyled(Box)(
+const RootWrapper = styled(Box)(
   ({ theme }) => `
         @media (min-width: ${theme.breakpoints.values.md}px) {
           display: flex;
@@ -42,14 +42,14 @@ const RootWrapper = experimentalStyled(Box)(
 `
 );
 
-const ListItemIconWrapper = experimentalStyled(ListItemIcon)(
+const ListItemIconWrapper = styled(ListItemIcon)(
   ({ theme }) => `
         min-width: 36px;
         color: ${theme.colors.primary.light};
 `
 );
 
-const AccordionSummaryWrapper = experimentalStyled(AccordionSummary)(
+const AccordionSummaryWrapper = styled(AccordionSummary)(
   ({ theme }) => `
         &.Mui-expanded {
           min-height: 48px;

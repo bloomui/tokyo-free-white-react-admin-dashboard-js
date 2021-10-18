@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import { experimentalStyled } from '@material-ui/core/styles';
+import { styled } from '@mui/material/styles';
 
-const TextWrapper = experimentalStyled('span')(
+const TextWrapper = styled('span')(
   ({ theme }) => `
       
       &.MuiText {

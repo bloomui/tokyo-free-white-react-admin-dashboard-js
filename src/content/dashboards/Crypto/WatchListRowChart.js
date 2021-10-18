@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { Line } from 'react-chartjs-2';
-import { useTheme } from '@material-ui/core';
+import { useTheme } from '@mui/material';
 
 const WatchListRowChart = ({ data: dataProp, labels, ...rest }) => {
   const theme = useTheme();
