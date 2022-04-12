@@ -1,3 +1,15 @@
+
+<h1>UPDATE</h1>
+<br>
+<p><b>React 18 upgraded fork of Tokyo Free White React Javascript Dashboard.</b></p>
+<br>
+<p>See package JSON for updates.</p>
+<br>
+<p><b>TODO:</b></p>
+<br>
+<p>Update: chart.js, react-chartjs-2</p>
+<br>
+---
 <p align="center">
     <a href="https://bloomui.com" title="BloomUI.com">
         <img src="https://bloomui.s3.us-east-2.amazonaws.com/tokyo-logo.png" alt="Tokyo Free White React Javascript Dashboard">
