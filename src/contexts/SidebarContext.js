@@ -7,9 +7,14 @@ export const SidebarProvider = ({ children }) => {
   const toggleSidebar = () => {
     setSidebarToggle(!sidebarToggle);
   };
+  const closeSidebar = () => {
+    setSidebarToggle(false);
+  };
 
   return (
-    <SidebarContext.Provider value={{ sidebarToggle, toggleSidebar }}>
+    <SidebarContext.Provider
+      value={{ sidebarToggle, toggleSidebar, closeSidebar }}
+    >
       {children}
     </SidebarContext.Provider>
   );

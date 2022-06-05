@@ -11,7 +11,6 @@ import {
 import { ArrowForwardTwoTone } from '@mui/icons-material';
 
 function Addresses() {
-
   const addresses = {
     delivery: 12,
     shipping: 8
@@ -36,7 +35,7 @@ function Addresses() {
             <Typography variant="caption" fontWeight="bold">
               Favourite
             </Typography>
-            <Box sx={{ minHeight: { xs: 0, md: 225 } }} p={2}>
+            <Box sx={{ minHeight: { xs: 0, md: 242 } }} p={2}>
               <Typography variant="h5">Kadin Westervelt</Typography>
               <Typography variant="h5" sx={{ py: 1 }} fontWeight="normal">
                 714-650-6297
@@ -66,7 +65,7 @@ function Addresses() {
             <Typography variant="caption" fontWeight="bold">
               Favourite
             </Typography>
-            <Box sx={{ minHeight: { xs: 0, md: 225 } }} p={2}>
+            <Box sx={{ minHeight: { xs: 0, md: 242 } }} p={2}>
               <Typography variant="h5">Kadin Westervelt</Typography>
               <Typography variant="h5" sx={{ py: 1 }} fontWeight="normal">
                 714-650-6297

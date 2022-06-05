@@ -63,7 +63,6 @@ const ListWrapper = styled(Box)(
 );
 
 function HeaderMenu() {
-
   const ref = useRef(null);
   const [isOpen, setOpen] = useState(false);
 
@@ -77,7 +76,12 @@ function HeaderMenu() {
 
   return (
     <>
-      <ListWrapper>
+      <ListWrapper
+        sx={{
+          display: {
+            xs: 'none', md: 'block'
+          }
+        }}>
         <List disablePadding component={Box} display="flex">
           <ListItem
             classes={{ root: 'MuiListItem-indicators' }}

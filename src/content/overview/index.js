@@ -15,7 +15,6 @@ const OverviewWrapper = styled(Box)(
 );
 
 function Overview() {
-
   return (
     <OverviewWrapper>
       <Helmet>

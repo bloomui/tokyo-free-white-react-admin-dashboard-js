@@ -18,10 +18,9 @@ import {
   ListItemButton,
   ListItemAvatar,
   ListItemText,
-  lighten
+  lighten,
+  styled
 } from '@mui/material';
-
-import { styled } from '@mui/material/styles';
 import { formatDistance, subMinutes, subHours } from 'date-fns';
 import SettingsTwoToneIcon from '@mui/icons-material/SettingsTwoTone';
 import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone';
@@ -94,9 +93,7 @@ const TabsContainerWrapper = styled(Box)(
 );
 
 function SidebarContent() {
-
-  const user =
-  {
+  const user = {
     name: 'Catherine Pike',
     avatar: '/static/images/avatars/1.jpg',
     jobtitle: 'Software Developer'
@@ -121,7 +118,7 @@ function SidebarContent() {
     { value: 'archived', label: 'Archived' }
   ];
 
-  const handleTabsChange = (event, value) => {
+  const handleTabsChange = (_event, value) => {
     setCurrentTab(value);
   };
 
@@ -129,7 +126,12 @@ function SidebarContent() {
     <RootWrapper>
       <Box display="flex" alignItems="flex-start">
         <Avatar alt={user.name} src={user.avatar} />
-        <Box sx={{ ml: 1.5, flex: 1 }}>
+        <Box
+          sx={{
+            ml: 1.5,
+            flex: 1
+          }}
+        >
           <Box
             display="flex"
             alignItems="flex-start"
@@ -143,7 +145,13 @@ function SidebarContent() {
                 {user.jobtitle}
               </Typography>
             </Box>
-            <IconButton sx={{ p: 1 }} size="small" color="primary">
+            <IconButton
+              sx={{
+                p: 1
+              }}
+              size="small"
+              color="primary"
+            >
               <SettingsTwoToneIcon fontSize="small" />
             </IconButton>
           </Box>
@@ -163,7 +171,10 @@ function SidebarContent() {
       </Box>
 
       <TextField
-        sx={{ mt: 2, mb: 1 }}
+        sx={{
+          mt: 2,
+          mb: 1
+        }}
         size="small"
         fullWidth
         InputProps={{
@@ -176,7 +187,13 @@ function SidebarContent() {
         placeholder="Search..."
       />
 
-      <Typography sx={{ mb: 1, mt: 2 }} variant="h3">
+      <Typography
+        sx={{
+          mb: 1,
+          mt: 2
+        }}
+        variant="h3"
+      >
         Chats
       </Typography>
 
@@ -203,7 +220,9 @@ function SidebarContent() {
                 <Avatar src="/static/images/avatars/1.jpg" />
               </ListItemAvatar>
               <ListItemText
-                sx={{ mr: 1 }}
+                sx={{
+                  mr: 1
+                }}
                 primaryTypographyProps={{
                   color: 'textPrimary',
                   variant: 'h5',
@@ -225,7 +244,9 @@ function SidebarContent() {
                 <Avatar src="/static/images/avatars/2.jpg" />
               </ListItemAvatar>
               <ListItemText
-                sx={{ mr: 1 }}
+                sx={{
+                  mr: 1
+                }}
                 primaryTypographyProps={{
                   color: 'textPrimary',
                   variant: 'h5',
@@ -241,10 +262,12 @@ function SidebarContent() {
             </ListItemWrapper>
             <ListItemWrapper>
               <ListItemAvatar>
-                <Avatar src="/static/images/avatars/1.jpg" />
+                <Avatar src="/static/images/avatars/3.jpg" />
               </ListItemAvatar>
               <ListItemText
-                sx={{ mr: 1 }}
+                sx={{
+                  mr: 1
+                }}
                 primaryTypographyProps={{
                   color: 'textPrimary',
                   variant: 'h5',
@@ -263,7 +286,9 @@ function SidebarContent() {
                 <Avatar src="/static/images/avatars/4.jpg" />
               </ListItemAvatar>
               <ListItemText
-                sx={{ mr: 1 }}
+                sx={{
+                  mr: 1
+                }}
                 primaryTypographyProps={{
                   color: 'textPrimary',
                   variant: 'h5',
@@ -289,7 +314,9 @@ function SidebarContent() {
                 <Avatar src="/static/images/avatars/1.jpg" />
               </ListItemAvatar>
               <ListItemText
-                sx={{ mr: 1 }}
+                sx={{
+                  mr: 1
+                }}
                 primaryTypographyProps={{
                   color: 'textPrimary',
                   variant: 'h5',
@@ -311,7 +338,9 @@ function SidebarContent() {
                 <Avatar src="/static/images/avatars/4.jpg" />
               </ListItemAvatar>
               <ListItemText
-                sx={{ mr: 1 }}
+                sx={{
+                  mr: 1
+                }}
                 primaryTypographyProps={{
                   color: 'textPrimary',
                   variant: 'h5',
@@ -332,19 +361,38 @@ function SidebarContent() {
         )}
         {currentTab === 'archived' && (
           <Box pb={3}>
-            <Divider sx={{ mb: 3 }} />
+            <Divider
+              sx={{
+                mb: 3
+              }}
+            />
             <AvatarSuccess>
               <CheckTwoToneIcon />
             </AvatarSuccess>
-            <Typography sx={{ mt: 2, textAlign: 'center' }} variant="subtitle2">
+            <Typography
+              sx={{
+                mt: 2,
+                textAlign: 'center'
+              }}
+              variant="subtitle2"
+            >
               Hurray! There are no archived chats!
             </Typography>
-            <Divider sx={{ mt: 3 }} />
+            <Divider
+              sx={{
+                mt: 3
+              }}
+            />
           </Box>
         )}
       </Box>
       <Box display="flex" pb={1} mt={4} alignItems="center">
-        <Typography sx={{ mr: 1 }} variant="h3">
+        <Typography
+          sx={{
+            mr: 1
+          }}
+          variant="h3"
+        >
           Meetings
         </Typography>
         <Label color="success">
@@ -359,7 +407,9 @@ function SidebarContent() {
           <Box pl={1}>
             <Typography
               variant="subtitle2"
-              sx={{ lineHeight: 1 }}
+              sx={{
+                lineHeight: 1
+              }}
               color="text.primary"
             >
               10:00 - 11:30
@@ -375,7 +425,10 @@ function SidebarContent() {
           <AvatarGroup>
             <Tooltip arrow title="View profile for Remy Sharp">
               <Avatar
-                sx={{ width: 28, height: 28 }}
+                sx={{
+                  width: 28,
+                  height: 28
+                }}
                 component={RouterLink}
                 to="#"
                 alt="Remy Sharp"
@@ -384,7 +437,10 @@ function SidebarContent() {
             </Tooltip>
             <Tooltip arrow title="View profile for Travis Howard">
               <Avatar
-                sx={{ width: 28, height: 28 }}
+                sx={{
+                  width: 28,
+                  height: 28
+                }}
                 component={RouterLink}
                 to="#"
                 alt="Travis Howard"
@@ -393,11 +449,14 @@ function SidebarContent() {
             </Tooltip>
             <Tooltip arrow title="View profile for Craig Vaccaro">
               <Avatar
-                sx={{ width: 28, height: 28 }}
+                sx={{
+                  width: 28,
+                  height: 28
+                }}
                 component={RouterLink}
                 to="#"
                 alt="Craig Vaccaro"
-                src="/static/images/avatars/1.jpg"
+                src="/static/images/avatars/3.jpg"
               />
             </Tooltip>
           </AvatarGroup>
@@ -416,7 +475,9 @@ function SidebarContent() {
           <Box pl={1}>
             <Typography
               variant="subtitle2"
-              sx={{ lineHeight: 1 }}
+              sx={{
+                lineHeight: 1
+              }}
               color="text.primary"
             >
               14:30 - 16:15
@@ -432,7 +493,10 @@ function SidebarContent() {
           <AvatarGroup>
             <Tooltip arrow title="View profile for Travis Howard">
               <Avatar
-                sx={{ width: 28, height: 28 }}
+                sx={{
+                  width: 28,
+                  height: 28
+                }}
                 component={RouterLink}
                 to="#"
                 alt="Travis Howard"
@@ -441,7 +505,10 @@ function SidebarContent() {
             </Tooltip>
             <Tooltip arrow title="View profile for Craig Vaccaro">
               <Avatar
-                sx={{ width: 28, height: 28 }}
+                sx={{
+                  width: 28,
+                  height: 28
+                }}
                 component={RouterLink}
                 to="#"
                 alt="Craig Vaccaro"

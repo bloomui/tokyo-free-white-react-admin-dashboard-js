@@ -1,6 +1,12 @@
-import { Box, Tooltip } from '@mui/material';
+import {
+  Box,
+  Tooltip,
+  Badge,
+  tooltipClasses,
+  styled,
+  useTheme
+} from '@mui/material';
 import { Link } from 'react-router-dom';
-import { styled } from '@mui/material/styles';
 
 const LogoWrapper = styled(Link)(
   ({ theme }) => `
@@ -70,18 +76,52 @@ const LogoSignInner = styled(Box)(
 `
 );
 
+const TooltipWrapper = styled(({ className, ...props }) => (
+  <Tooltip {...props} classes={{ popper: className }} />
+))(({ theme }) => ({
+  [`& .${tooltipClasses.tooltip}`]: {
+    backgroundColor: theme.colors.alpha.trueWhite[100],
+    color: theme.palette.getContrastText(theme.colors.alpha.trueWhite[100]),
+    fontSize: theme.typography.pxToRem(12),
+    fontWeight: 'bold',
+    borderRadius: theme.general.borderRadiusSm,
+    boxShadow:
+      '0 .2rem .8rem rgba(7,9,25,.18), 0 .08rem .15rem rgba(7,9,25,.15)'
+  },
+  [`& .${tooltipClasses.arrow}`]: {
+    color: theme.colors.alpha.trueWhite[100]
+  }
+}));
+
 function Logo() {
+  const theme = useTheme();
 
   return (
-    <Tooltip title="Tokyo Free White React Javascript Admin Dashboard" arrow>
+    <TooltipWrapper
+      title="Tokyo Free White React Javascript Admin Dashboard"
+      arrow
+    >
       <LogoWrapper to="/overview">
-        <LogoSignWrapper>
-          <LogoSign>
-            <LogoSignInner />
-          </LogoSign>
-        </LogoSignWrapper>
+        <Badge
+          sx={{
+            '.MuiBadge-badge': {
+              fontSize: theme.typography.pxToRem(11),
+              right: -2,
+              top: 8
+            }
+          }}
+          overlap="circular"
+          color="success"
+          badgeContent="2.0"
+        >
+          <LogoSignWrapper>
+            <LogoSign>
+              <LogoSignInner />
+            </LogoSign>
+          </LogoSignWrapper>
+        </Badge>
       </LogoWrapper>
-    </Tooltip>
+    </TooltipWrapper>
   );
 }
 

@@ -7,17 +7,16 @@ import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
-  useTheme,
   Drawer,
   Divider,
   Typography,
   List,
   ListItem,
   ListItemText,
-  ListItemIcon
+  ListItemIcon,
+  styled,
+  useTheme
 } from '@mui/material';
-
-import { styled } from '@mui/material/styles';
 import { formatDistance, subMinutes } from 'date-fns';
 import CallTwoToneIcon from '@mui/icons-material/CallTwoTone';
 import VideoCameraFrontTwoToneIcon from '@mui/icons-material/VideoCameraFrontTwoTone';
@@ -84,7 +83,6 @@ const AccordionSummaryWrapper = styled(AccordionSummary)(
 );
 
 function TopBarContent() {
-
   const theme = useTheme();
 
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -102,18 +100,19 @@ function TopBarContent() {
   return (
     <>
       <RootWrapper>
-        <Box sx={{ display: { sm: 'flex' } }} alignItems="center">
+        <Box display="flex" alignItems="center">
           <Avatar
             variant="rounded"
-            sx={{ width: 50, height: 50 }}
+            sx={{
+              width: 48,
+              height: 48
+            }}
             alt="Zain Baptista"
-            src="/static/images/avatars/2.jpg"
+            src="/static/images/avatars/1.jpg"
           />
-          <Box sx={{ pl: { sm: 1.5 }, pt: { xs: 1.5, sm: 0 } }}>
-            <Typography variant="h4" gutterBottom>
-              Zain Baptista
-            </Typography>
-            <Typography variant="subtitle2">
+          <Box ml={1}>
+            <Typography variant="h4">Zain Baptista</Typography>
+            <Typography variant="subtitle1">
               {formatDistance(subMinutes(new Date(), 8), new Date(), {
                 addSuffix: true
               })}
@@ -122,7 +121,7 @@ function TopBarContent() {
         </Box>
         <Box
           sx={{
-            mt: { xs: 3, md: 0 }
+            display: { xs: 'none', lg: 'flex' }
           }}
         >
           <Tooltip placement="bottom" title="Start a voice call">
@@ -143,14 +142,26 @@ function TopBarContent() {
         </Box>
       </RootWrapper>
       <Drawer
+        sx={{
+          display: { xs: 'none', md: 'flex' }
+        }}
         variant="temporary"
         anchor={theme.direction === 'rtl' ? 'left' : 'right'}
         open={mobileOpen}
         onClose={handleDrawerToggle}
         elevation={9}
       >
-        <Box sx={{ minWidth: 360 }} p={2}>
-          <Box sx={{ textAlign: 'center' }}>
+        <Box
+          sx={{
+            minWidth: 360
+          }}
+          p={2}
+        >
+          <Box
+            sx={{
+              textAlign: 'center'
+            }}
+          >
             <Avatar
               sx={{
                 mx: 'auto',
@@ -160,7 +171,7 @@ function TopBarContent() {
               }}
               variant="rounded"
               alt="Zain Baptista"
-              src="/static/images/avatars/2.jpg"
+              src="/static/images/avatars/1.jpg"
             />
             <Typography variant="h4">Zain Baptista</Typography>
             <Typography variant="subtitle2">
@@ -170,7 +181,11 @@ function TopBarContent() {
               })}
             </Typography>
           </Box>
-          <Divider sx={{ my: 3 }} />
+          <Divider
+            sx={{
+              my: 3
+            }}
+          />
 
           <Accordion
             expanded={expanded === 'section1'}
@@ -179,7 +194,11 @@ function TopBarContent() {
             <AccordionSummaryWrapper expandIcon={<ExpandMoreIcon />}>
               <Typography variant="h5">Customize Chat</Typography>
             </AccordionSummaryWrapper>
-            <AccordionDetails sx={{ p: 0 }}>
+            <AccordionDetails
+              sx={{
+                p: 0
+              }}
+            >
               <List component="nav">
                 <ListItem button>
                   <ListItemIconWrapper>
@@ -218,7 +237,11 @@ function TopBarContent() {
             <AccordionSummaryWrapper expandIcon={<ExpandMoreIcon />}>
               <Typography variant="h5">Privacy & Support</Typography>
             </AccordionSummaryWrapper>
-            <AccordionDetails sx={{ p: 0 }}>
+            <AccordionDetails
+              sx={{
+                p: 0
+              }}
+            >
               <List component="nav">
                 <ListItem button>
                   <ListItemIconWrapper>
@@ -268,7 +291,11 @@ function TopBarContent() {
             <AccordionSummaryWrapper expandIcon={<ExpandMoreIcon />}>
               <Typography variant="h5">Shared Files</Typography>
             </AccordionSummaryWrapper>
-            <AccordionDetails sx={{ p: 0 }}>
+            <AccordionDetails
+              sx={{
+                p: 0
+              }}
+            >
               <List component="nav">
                 <ListItem button>
                   <ListItemIconWrapper>

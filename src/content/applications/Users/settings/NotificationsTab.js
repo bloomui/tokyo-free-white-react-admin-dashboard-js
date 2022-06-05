@@ -1,4 +1,4 @@
-import { useState, ChangeEvent } from 'react';
+import { useState } from 'react';
 import {
   Box,
   Typography,
@@ -12,7 +12,6 @@ import {
 } from '@mui/material';
 
 function NotificationsTab() {
-
   const [state, setState] = useState({
     checkedA: true,
     checkedB: false,

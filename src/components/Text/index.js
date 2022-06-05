@@ -1,8 +1,15 @@
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
+import clsx from 'clsx';
 
 const TextWrapper = styled('span')(
   ({ theme }) => `
+      display: inline-block;
+      align-items: center;
+
+      &.flexItem {
+        display: inline-flex;
+      }
       
       &.MuiText {
 
@@ -37,9 +44,12 @@ const TextWrapper = styled('span')(
 `
 );
 
-const Text = ({ className = '', color = 'secondary', children, ...rest }) => {
+const Text = ({ className, color = 'secondary', flex, children, ...rest }) => {
   return (
-    <TextWrapper className={'MuiText-' + color} {...rest}>
+    <TextWrapper
+      className={clsx('MuiText-' + color, { flexItem: flex })}
+      {...rest}
+    >
       {children}
     </TextWrapper>
   );

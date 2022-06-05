@@ -3,7 +3,6 @@ import RecentOrdersTable from './RecentOrdersTable';
 import { subDays } from 'date-fns';
 
 function RecentOrders() {
-
   const cryptoOrders = [
     {
       id: '1',

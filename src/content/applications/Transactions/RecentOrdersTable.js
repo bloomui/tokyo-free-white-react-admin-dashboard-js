@@ -1,4 +1,4 @@
-import { FC, ChangeEvent, useState } from 'react';
+import { useState } from 'react';
 import { format } from 'date-fns';
 import numeral from 'numeral';
 import PropTypes from 'prop-types';
@@ -68,7 +68,6 @@ const applyPagination = (cryptoOrders, page, limit) => {
 };
 
 const RecentOrdersTable = ({ cryptoOrders }) => {
-
   const [selectedCryptoOrders, setSelectedCryptoOrders] = useState([]);
   const selectedBulkActions = selectedCryptoOrders.length > 0;
   const [page, setPage] = useState(0);

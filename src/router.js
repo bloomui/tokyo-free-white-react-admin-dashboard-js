@@ -6,11 +6,12 @@ import BaseLayout from 'src/layouts/BaseLayout';
 
 import SuspenseLoader from 'src/components/SuspenseLoader';
 
-const Loader = (Component) => (props) => (
-  <Suspense fallback={<SuspenseLoader />}>
-    <Component {...props} />
-  </Suspense>
-);
+const Loader = (Component) => (props) =>
+  (
+    <Suspense fallback={<SuspenseLoader />}>
+      <Component {...props} />
+    </Suspense>
+  );
 
 // Pages
 
@@ -22,34 +23,61 @@ const Crypto = Loader(lazy(() => import('src/content/dashboards/Crypto')));
 
 // Applications
 
-const Messenger = Loader(lazy(() => import('src/content/applications/Messenger')));
-const Transactions = Loader(lazy(() => import('src/content/applications/Transactions')));
-const UserProfile = Loader(lazy(() => import('src/content/applications/Users/profile')));
-const UserSettings = Loader(lazy(() => import('src/content/applications/Users/settings')));
+const Messenger = Loader(
+  lazy(() => import('src/content/applications/Messenger'))
+);
+const Transactions = Loader(
+  lazy(() => import('src/content/applications/Transactions'))
+);
+const UserProfile = Loader(
+  lazy(() => import('src/content/applications/Users/profile'))
+);
+const UserSettings = Loader(
+  lazy(() => import('src/content/applications/Users/settings'))
+);
 
 // Components
 
-const Buttons = Loader(lazy(() => import('src/content/pages/Components/Buttons')));
-const Modals = Loader(lazy(() => import('src/content/pages/Components/Modals')));
-const Accordions = Loader(lazy(() => import('src/content/pages/Components/Accordions')));
+const Buttons = Loader(
+  lazy(() => import('src/content/pages/Components/Buttons'))
+);
+const Modals = Loader(
+  lazy(() => import('src/content/pages/Components/Modals'))
+);
+const Accordions = Loader(
+  lazy(() => import('src/content/pages/Components/Accordions'))
+);
 const Tabs = Loader(lazy(() => import('src/content/pages/Components/Tabs')));
-const Badges = Loader(lazy(() => import('src/content/pages/Components/Badges')));
-const Tooltips = Loader(lazy(() => import('src/content/pages/Components/Tooltips')));
-const Avatars = Loader(lazy(() => import('src/content/pages/Components/Avatars')));
+const Badges = Loader(
+  lazy(() => import('src/content/pages/Components/Badges'))
+);
+const Tooltips = Loader(
+  lazy(() => import('src/content/pages/Components/Tooltips'))
+);
+const Avatars = Loader(
+  lazy(() => import('src/content/pages/Components/Avatars'))
+);
 const Cards = Loader(lazy(() => import('src/content/pages/Components/Cards')));
 const Forms = Loader(lazy(() => import('src/content/pages/Components/Forms')));
 
 // Status
 
-const Status404 = Loader(lazy(() => import('src/content/pages/Status/Status404')));
-const Status500 = Loader(lazy(() => import('src/content/pages/Status/Status500')));
-const StatusComingSoon = Loader(lazy(() => import('src/content/pages/Status/ComingSoon')));
-const StatusMaintenance = Loader(lazy(() => import('src/content/pages/Status/Maintenance')));
-
+const Status404 = Loader(
+  lazy(() => import('src/content/pages/Status/Status404'))
+);
+const Status500 = Loader(
+  lazy(() => import('src/content/pages/Status/Status500'))
+);
+const StatusComingSoon = Loader(
+  lazy(() => import('src/content/pages/Status/ComingSoon'))
+);
+const StatusMaintenance = Loader(
+  lazy(() => import('src/content/pages/Status/Maintenance'))
+);
 
 const routes = [
   {
-    path: '*',
+    path: '',
     element: <BaseLayout />,
     children: [
       {
@@ -58,24 +86,14 @@ const routes = [
       },
       {
         path: 'overview',
-        element: (
-          <Navigate
-            to="/"
-            replace
-          />
-        )
+        element: <Navigate to="/" replace />
       },
       {
         path: 'status',
         children: [
           {
-            path: '/',
-            element: (
-              <Navigate
-                to="404"
-                replace
-              />
-            )
+            path: '',
+            element: <Navigate to="404" replace />
           },
           {
             path: '404',
@@ -92,29 +110,22 @@ const routes = [
           {
             path: 'coming-soon',
             element: <StatusComingSoon />
-          },
+          }
         ]
       },
       {
         path: '*',
         element: <Status404 />
-      },
+      }
     ]
   },
   {
     path: 'dashboards',
-    element: (
-      <SidebarLayout />
-    ),
+    element: <SidebarLayout />,
     children: [
       {
-        path: '/',
-        element: (
-          <Navigate
-            to="/dashboards/crypto"
-            replace
-          />
-        )
+        path: '',
+        element: <Navigate to="tasks" replace />
       },
       {
         path: 'crypto',
@@ -128,18 +139,11 @@ const routes = [
   },
   {
     path: 'management',
-    element: (
-      <SidebarLayout />
-    ),
+    element: <SidebarLayout />,
     children: [
       {
-        path: '/',
-        element: (
-          <Navigate
-            to="/management/transactions"
-            replace
-          />
-        )
+        path: '',
+        element: <Navigate to="transactions" replace />
       },
       {
         path: 'transactions',
@@ -149,13 +153,8 @@ const routes = [
         path: 'profile',
         children: [
           {
-            path: '/',
-            element: (
-              <Navigate
-                to="details"
-                replace
-              />
-            )
+            path: '',
+            element: <Navigate to="details" replace />
           },
           {
             path: 'details',
@@ -164,25 +163,18 @@ const routes = [
           {
             path: 'settings',
             element: <UserSettings />
-          },
+          }
         ]
       }
     ]
   },
   {
-    path: 'components',
-    element: (
-      <SidebarLayout />
-    ),
+    path: '/components',
+    element: <SidebarLayout />,
     children: [
       {
-        path: '/',
-        element: (
-          <Navigate
-            to="/components/buttons"
-            replace
-          />
-        )
+        path: '',
+        element: <Navigate to="buttons" replace />
       },
       {
         path: 'buttons',
@@ -219,7 +211,7 @@ const routes = [
       {
         path: 'forms',
         element: <Forms />
-      },
+      }
     ]
   }
 ];

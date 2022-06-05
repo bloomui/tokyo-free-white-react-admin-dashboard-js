@@ -1,7 +1,14 @@
 import { Helmet } from 'react-helmet-async';
 import PageTitle from 'src/components/PageTitle';
 import PageTitleWrapper from 'src/components/PageTitleWrapper';
-import { Container, Grid, Card, CardHeader, CardContent, Divider } from '@mui/material';
+import {
+  Container,
+  Grid,
+  Card,
+  CardHeader,
+  CardContent,
+  Divider
+} from '@mui/material';
 import { useState } from 'react';
 
 import Tabs from '@mui/material/Tabs';
@@ -33,12 +40,11 @@ function TabPanel(props) {
 function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`
   };
 }
 
 function TabsDemo() {
-
   const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
@@ -54,7 +60,8 @@ function TabsDemo() {
         <PageTitle
           heading="Tabs"
           subHeading="Tabs make it easy to explore and switch between different views."
-          docs="https://material-ui.com/components/tabs/" />
+          docs="https://material-ui.com/components/tabs/"
+        />
       </PageTitleWrapper>
       <Container maxWidth="lg">
         <Grid
@@ -70,10 +77,15 @@ function TabsDemo() {
               <Divider />
               <CardContent>
                 <Box sx={{ width: '100%' }}>
-                  <Tabs variant="scrollable"
+                  <Tabs
+                    variant="scrollable"
                     scrollButtons="auto"
                     textColor="primary"
-                    indicatorColor="primary" value={value} onChange={handleChange} aria-label="basic tabs example">
+                    indicatorColor="primary"
+                    value={value}
+                    onChange={handleChange}
+                    aria-label="basic tabs example"
+                  >
                     <Tab label="Item One" {...a11yProps(0)} />
                     <Tab label="Item Two" {...a11yProps(1)} />
                     <Tab label="Item Three" {...a11yProps(2)} />

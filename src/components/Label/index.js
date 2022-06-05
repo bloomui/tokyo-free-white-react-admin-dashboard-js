@@ -17,6 +17,11 @@ const LabelWrapper = styled('span')(
           background-color: ${theme.colors.primary.lighter};
           color: ${theme.palette.primary.main}
         }
+
+        &-black {
+          background-color: ${theme.colors.alpha.black[100]};
+          color: ${theme.colors.alpha.white[100]};
+        }
         
         &-secondary {
           background-color: ${theme.colors.secondary.lighter};
@@ -46,7 +51,7 @@ const LabelWrapper = styled('span')(
 `
 );
 
-const Label = ({ className = '', color = 'secondary', children, ...rest }) => {
+const Label = ({ className, color = 'secondary', children, ...rest }) => {
   return (
     <LabelWrapper className={'MuiLabel-' + color} {...rest}>
       {children}
@@ -59,6 +64,7 @@ Label.propTypes = {
   className: PropTypes.string,
   color: PropTypes.oneOf([
     'primary',
+    'black',
     'secondary',
     'error',
     'warning',

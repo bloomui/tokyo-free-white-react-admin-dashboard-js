@@ -1,0 +1,67 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": ["airbnb", "plugin:prettier/recommended"],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "requireConfigFile": false
+  },
+  "rules": {
+    "no-underscore-dangle": "off",
+    "prefer-const": "off",
+    "radix": "off",
+    "prefer-destructuring": "off",
+    "no-shadow": "off",
+    "prettier/prettier": "off",
+    "react/jsx-filename-extension": "off",
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "react/display-name": "off",
+    "import/prefer-default-export": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "comma-dangle": "off",
+    "max-len": "off",
+    "no-console": "off",
+    "no-param-reassign": "off",
+    "no-plusplus": "off",
+    "func-names": "off",
+    "no-return-assign": "off",
+    "object-curly-newline": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/require-default-props": "off",
+    "import/no-extraneous-dependencies": "off",
+    "react/no-unescaped-entities": "off",
+    "react/forbid-prop-types": "off",
+    "no-use-before-define": "off",
+    "no-nested-ternary": "off",
+    "react/no-danger": "off",
+    "react/default-props-match-prop-types": "off",
+    "react/jsx-max-props-per-line": [
+      1,
+      {
+        "maximum": 2,
+        "when": "multiline"
+      }
+    ],
+    "react/no-array-index-key": "off",
+    "import/no-unused-modules": ["off"],
+    "indent": "off",
+    "react/prop-types": ["off"],
+    "jsx-a11y/label-has-associated-control": ["off"],
+    "react/function-component-definition": ["off"],
+    "import/order": ["off"],
+    "import/no-duplicates": ["off"],
+    "no-promise-executor-return": ["off"],
+    "react/jsx-no-constructed-context-values": ["off"],
+    "react/destructuring-assignment": ["off"],
+    "react/jsx-no-useless-fragment": ["off"],
+    "dot-notation": ["off"],
+    "prefer-template": ["off"],
+    "react/jsx-curly-brace-presence": ["off"],
+    "react/no-unstable-nested-components": ["off"],
+    "object-shorthand": ["off"]
+  }
+}

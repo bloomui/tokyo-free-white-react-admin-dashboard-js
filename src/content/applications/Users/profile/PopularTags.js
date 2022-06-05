@@ -23,7 +23,6 @@ const ListWrapper = styled(List)(
 );
 
 function PopularTags() {
-
   const theme = useTheme();
 
   return (
