@@ -18,9 +18,9 @@ import {
   DialogContent,
   DialogTitle,
   Slide,
-  Hidden
+  Hidden,
+  styled
 } from '@mui/material';
-import { styled } from '@mui/material/styles';
 import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone';
 import FindInPageTwoToneIcon from '@mui/icons-material/FindInPageTwoTone';
 

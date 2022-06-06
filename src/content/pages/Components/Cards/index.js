@@ -9,11 +9,11 @@ import {
   Card,
   CardHeader,
   CardContent,
-  Divider
+  Divider,
+  styled
 } from '@mui/material';
 import Footer from 'src/components/Footer';
 import CardActions from '@mui/material/CardActions';
-import { styled } from '@mui/material/styles';
 
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';

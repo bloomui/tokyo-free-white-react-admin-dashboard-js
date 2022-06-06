@@ -1,8 +1,6 @@
-import { Box, Button, Container, Grid, Typography } from '@mui/material';
+import { Box, Button, Container, Grid, Typography, styled } from '@mui/material';
 
 import { Link as RouterLink } from 'react-router-dom';
-
-import { styled } from '@mui/material/styles';
 
 const TypographyH1 = styled(Typography)(
   ({ theme }) => `
@@ -123,7 +121,7 @@ function Hero() {
               </MuiAvatar>
               <Typography variant="h4">
                 <Box sx={{ pb: 2 }}>
-                  <b>Powered by Material-UI</b>
+                  <b>Powered by MUI (Material-UI)</b>
                 </Box>
                 <Typography component="span" variant="subtitle2">
                   A simple and customizable component library to build faster,

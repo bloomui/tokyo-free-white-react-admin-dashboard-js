@@ -14,9 +14,9 @@ import {
   CardContent,
   Tooltip,
   IconButton,
-  Avatar
+  Avatar,
+  styled
 } from '@mui/material';
-import { styled } from '@mui/material/styles';
 import DeleteTwoToneIcon from '@mui/icons-material/DeleteTwoTone';
 import AddTwoToneIcon from '@mui/icons-material/AddTwoTone';
 
@@ -94,7 +94,7 @@ function MyCards() {
     setSelectedValue(event.target.value);
   };
 
-  const handleDelete = () => {};
+  const handleDelete = () => { };
 
   return (
     <Card>

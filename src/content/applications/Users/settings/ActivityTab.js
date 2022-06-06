@@ -9,9 +9,9 @@ import {
   IconButton,
   Button,
   CardActions,
-  Link
+  Link,
+  styled
 } from '@mui/material';
-import { styled } from '@mui/material/styles';
 
 import MoreHorizTwoToneIcon from '@mui/icons-material/MoreHorizTwoTone';
 import ThumbUpAltTwoToneIcon from '@mui/icons-material/ThumbUpAltTwoTone';

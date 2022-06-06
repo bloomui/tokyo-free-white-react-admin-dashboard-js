@@ -7,9 +7,9 @@ import {
   Avatar,
   CardMedia,
   Button,
-  IconButton
+  IconButton,
+  styled
 } from '@mui/material';
-import { styled } from '@mui/material/styles';
 
 import ArrowBackTwoToneIcon from '@mui/icons-material/ArrowBackTwoTone';
 import ArrowForwardTwoToneIcon from '@mui/icons-material/ArrowForwardTwoTone';
